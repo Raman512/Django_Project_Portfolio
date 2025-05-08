@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact{% endblock title %}
+
+{% block content %}
+<!-- Container for the contact form with fade-in animation -->
+<div class="bg-gray-800 text-white p-3 md:px-10 lg:px-20 xl:px-40 2xl:px-72 animate__animated animate__fadeIn">
+    <p class="text-4xl font-extrabold py-5 text-center md:text-start">Contact</p>
+
+    {% if messages %}
+    <div class="messages grid place-content-center mb-5">
+        {% for message in messages %}
+        <div{% if message.tags %} class="{{ message.tags }} bg-slate-700 py-3 px-5 mx-5 rounded-lg flex items-center justify-center text-sm md:text-base"{% endif %}>
+            <p><i class="fa-regular fa-bell"></i> {{ message }}</p>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <!-- Contact Form -->
+    <div class="max-w-4xl mx-auto bg-gray-900 p-8 rounded-xl shadow-lg">
+        <form class="space-y-6" action="/contact" name="contactForm" method="POST" onsubmit="return validateForm()">
+            {% csrf_token %}
+            
+            <!-- Name Input -->
+            <div class="relative">
+                <label for="name" class="text-lg font-medium text-white">Name</label>
+                <input class="p-4 w-full bg-gray-800 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 text-white placeholder-gray-400 transition-all ease-in-out" 
+                    type="text" id="name" placeholder="Your Name" name="name">
+            </div>
+
+            <!-- Email Input -->
+            <div class="relative">
+                <label for="email" class="text-lg font-medium text-white">Email</label>
+                <input class="p-4 w-full bg-gray-800 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 text-white placeholder-gray-400 transition-all ease-in-out" 
+                    type="email" id="email" placeholder="Your Email" name="email">
+            </div>
+
+            <!-- Phone Input -->
+            <div class="relative">
+                <label for="phone" class="text-lg font-medium text-white">Phone</label>
+                <input class="p-4 w-full bg-gray-800 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 text-white placeholder-gray-400 transition-all ease-in-out" 
+                    type="text" id="phone" placeholder="Your Phone Number" name="phone">
+            </div>
+
+            <!-- Message Textarea -->
+            <div class="relative">
+                <label for="message" class="text-lg font-medium text-white">Message</label>
+                <textarea class="p-4 w-full bg-gray-800 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 text-white placeholder-gray-400 resize-none h-32 transition-all ease-in-out" 
+                    placeholder="Your Message" name="message"></textarea>
+            </div>
+            
+            <!-- Submit Button -->
+            <button type="submit" class="w-full bg-blue-600 p-3 rounded-lg text-white hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 transition-all ease-in-out duration-300">
+                <i class="fa-regular fa-paper-plane"></i> Send
+            </button>
+        </form>
+    </div>
+</div>
+
+<!-- Custom Animation CSS -->
+<style>
+    .animate__fadeIn {
+        animation: fadeIn 1.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>
+
+{% endblock %}

@@ -1,0 +1,145 @@
+{% extends 'base.html' %}
+
+{% block title %}About{% endblock title %}
+
+{% block content %}
+<div class="bg-gray-800 text-white py-6 px-4 md:px-10 lg:px-20 xl:px-40 2xl:px-72">
+  <div class="max-w-5xl mx-auto">
+    <p class="text-4xl font-extrabold py-5 text-center md:text-left" style="font-family: Poppins-Bold">About Me</p>
+    <p class="text-justify text-base md:text-lg">
+      👋 Hi,<br><br>
+      My name is RamanPreet, and I am a passionate and self-motivated Full Stack Developer and Cybersecurity Intern with a growing focus on ethical hacking and penetration testing. I thrive on creating innovative web solutions and securing digital systems in today’s evolving threat landscape.
+
+      After completing my schooling in 2020, I pursued a degree in Computer Science Engineering, which I successfully completed in June 2024. During this time, I actively explored both development and cybersecurity, which led me to my first opportunity in ethical hacking and penetration testing—an experience that confirmed my passion for cyber defense.
+
+      I have a strong foundation in web development, using technologies like Python, HTML, CSS, JavaScript, SQL, and scripting in Bash/Shell. I work with frameworks such as Django for backend development and Tailwind CSS for responsive UI design.
+
+      In cybersecurity, I have hands-on knowledge of:
+      <ul class="list-disc ml-6 mt-2">
+        <li>Network security and firewall configuration</li>
+        <li>Reconnaissance and vulnerability assessment</li>
+        <li>Web application testing (XSS, SQLi, etc.)</li>
+        <li>Malware analysis and exploitation</li>
+        <li>OWASP Top 10 and secure coding practices</li>
+        <li>Tools: Nmap, Burp Suite, Wireshark, Metasploit, Kali Linux</li>
+      </ul>
+
+      I continuously seek to grow as a developer and cybersecurity engineer, aiming to support secure and scalable projects through technical excellence and innovation.
+    </p>
+
+    <!-- SKILLS SECTION -->
+    <div class="my-10">
+      <p class="text-4xl font-extrabold py-5 text-center md:text-left" style="font-family: Poppins-Bold">Skills</p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Web Development Skills -->
+        <div>
+          <p class="text-base font-medium">HTML</p>
+          <div class="w-full bg-gray-700 rounded-full h-2.5">
+            <div class="html h-2.5 rounded-full bg-gradient-to-r from-cyan-300 to-blue-600"></div>
+          </div>
+        </div>
+        <div>
+          <p class="text-base font-medium">CSS</p>
+          <div class="w-full bg-gray-700 rounded-full h-2.5">
+            <div class="css h-2.5 rounded-full bg-gradient-to-r from-cyan-300 to-blue-600"></div>
+          </div>
+        </div>
+        <div>
+          <p class="text-base font-medium">JavaScript</p>
+          <div class="w-full bg-gray-700 rounded-full h-2.5">
+            <div class="js h-2.5 rounded-full bg-gradient-to-r from-cyan-300 to-blue-600"></div>
+          </div>
+        </div>
+        <div>
+          <p class="text-base font-medium">Python</p>
+          <div class="w-full bg-gray-700 rounded-full h-2.5">
+            <div class="py h-2.5 rounded-full bg-gradient-to-r from-cyan-300 to-blue-600"></div>
+          </div>
+        </div>
+        <div>
+          <p class="text-base font-medium">SQL</p>
+          <div class="w-full bg-gray-700 rounded-full h-2.5">
+            <div class="sql h-2.5 rounded-full bg-gradient-to-r from-cyan-300 to-blue-600"></div>
+          </div>
+        </div>
+
+        <!-- Cybersecurity Skills -->
+        <div>
+          <p class="text-base font-medium">Network Security</p>
+          <div class="w-full bg-gray-700 rounded-full h-2.5">
+            <div class="network-security h-2.5 rounded-full bg-gradient-to-r from-green-300 to-blue-600"></div>
+          </div>
+        </div>
+        <div>
+          <p class="text-base font-medium">Firewall</p>
+          <div class="w-full bg-gray-700 rounded-full h-2.5">
+            <div class="firewall h-2.5 rounded-full bg-gradient-to-r from-green-300 to-blue-600"></div>
+          </div>
+        </div>
+        <div>
+          <p class="text-base font-medium">Reconnaissance</p>
+          <div class="w-full bg-gray-700 rounded-full h-2.5">
+            <div class="reconnaissance h-2.5 rounded-full bg-gradient-to-r from-green-300 to-blue-600"></div>
+          </div>
+        </div>
+        <div>
+          <p class="text-base font-medium">Vulnerability Assessment</p>
+          <div class="w-full bg-gray-700 rounded-full h-2.5">
+            <div class="vuln h-2.5 rounded-full bg-gradient-to-r from-green-300 to-blue-600"></div>
+          </div>
+        </div>
+        <div>
+          <p class="text-base font-medium">Web App Testing</p>
+          <div class="w-full bg-gray-700 rounded-full h-2.5">
+            <div class="webtest h-2.5 rounded-full bg-gradient-to-r from-green-300 to-blue-600"></div>
+          </div>
+        </div>
+        <div>
+          <p class="text-base font-medium">Exploitation</p>
+          <div class="w-full bg-gray-700 rounded-full h-2.5">
+            <div class="exploit h-2.5 rounded-full bg-gradient-to-r from-green-300 to-blue-600"></div>
+          </div>
+        </div>
+        <div>
+          <p class="text-base font-medium">OWASP Top 10</p>
+          <div class="w-full bg-gray-700 rounded-full h-2.5">
+            <div class="owasp h-2.5 rounded-full bg-gradient-to-r from-green-300 to-blue-600"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Animated Skill  -->
+  <style>
+    .html { width: 0%; animation: html-animation 2.5s forwards; }
+    .css { width: 0%; animation: css-animation 2.5s forwards; }
+    .js { width: 0%; animation: js-animation 2.5s forwards; }
+    .py { width: 0%; animation: py-animation 2.5s forwards; }
+    .sql { width: 0%; animation: sql-animation 2.5s forwards; }
+
+    .network-security { width: 0%; animation: ns-animation 2.5s forwards; }
+    .firewall { width: 0%; animation: fw-animation 2.5s forwards; }
+    .reconnaissance { width: 0%; animation: rec-animation 2.5s forwards; }
+    .vuln { width: 0%; animation: vuln-animation 2.5s forwards; }
+    .webtest { width: 0%; animation: webtest-animation 2.5s forwards; }
+    .exploit { width: 0%; animation: exploit-animation 2.5s forwards; }
+    .owasp { width: 0%; animation: owasp-animation 2.5s forwards; }
+
+    @keyframes html-animation { to { width: 95%; } }
+    @keyframes css-animation { to { width: 85%; } }
+    @keyframes js-animation { to { width: 70%; } }
+    @keyframes py-animation { to { width: 90%; } }
+    @keyframes sql-animation { to { width: 80%; } }
+
+    @keyframes ns-animation { to { width: 80%; } }
+    @keyframes fw-animation { to { width: 75%; } }
+    @keyframes rec-animation { to { width: 70%; } }
+    @keyframes vuln-animation { to { width: 90%; } }
+    @keyframes webtest-animation { to { width: 85%; } }
+    @keyframes exploit-animation { to { width: 75%; } }
+    @keyframes owasp-animation { to { width: 85%; } }
+  </style>
+</div>
+{% endblock %}
