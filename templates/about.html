@@ -3,9 +3,9 @@
 {% block title %}About{% endblock title %}
 
 {% block content %}
-<div class="bg-gray-800 text-white py-6 px-4 md:px-10 lg:px-20 xl:px-40 2xl:px-72">
+<div class="bg-gray-800 text-white py-6 px-4 md:px-10 lg:px-20 xl:px-40 2xl:px-72 animate__zoomIn">
   <div class="max-w-5xl mx-auto">
-    <p class="text-4xl font-extrabold py-5 text-center md:text-left" style="font-family: Poppins-Bold">About Me</p>
+    <p class="text-4xl font-extrabold py-5 text-center md:text-left" style="font-family: Poppins-Bold;">About Me</p>
     <p class="text-justify text-base md:text-lg">
       👋 Hi,<br><br>
       My name is RamanPreet, and I am a passionate and self-motivated Full Stack Developer and Cybersecurity Intern with a growing focus on ethical hacking and penetration testing. I thrive on creating innovative web solutions and securing digital systems in today’s evolving threat landscape.
@@ -29,7 +29,7 @@
 
     <!-- SKILLS SECTION -->
     <div class="my-10">
-      <p class="text-4xl font-extrabold py-5 text-center md:text-left" style="font-family: Poppins-Bold">Skills</p>
+      <p class="text-4xl font-extrabold py-5 text-center md:text-left" style="font-family: Poppins-Bold;">Skills</p>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <!-- Web Development Skills -->
@@ -111,7 +111,7 @@
     </div>
   </div>
 
-  <!-- Animated Skill  -->
+  <!-- Animated Skill Bars -->
   <style>
     .html { width: 0%; animation: html-animation 2.5s forwards; }
     .css { width: 0%; animation: css-animation 2.5s forwards; }
@@ -142,4 +142,22 @@
     @keyframes owasp-animation { to { width: 85%; } }
   </style>
 </div>
+<style>
+    .animate__zoomIn {
+        animation: zoomIn 1.5s ease-out;
+    }
+
+    @keyframes zoomIn {
+        0% {
+            opacity: 0;
+            transform: scale(0.8);
+        }
+        100% {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+</style>
+
+
 {% endblock %}
